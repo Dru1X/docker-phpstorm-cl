@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<framework xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemas/frameworkDescriptionVersion1.1.4.xsd" name="docker" invoke="docker" alias="d" enabled="true" version="2">
+    <help><![CDATA[A self-sufficient runtime for containers.]]></help>
+    <command>
+        <name>attach</name>
+        <help><![CDATA[Attach to a running container]]></help>
+    </command>
+    <command>
+        <name>build</name>
+        <help><![CDATA[Build an image from a Dockerfile]]></help>
+    </command>
+    <command>
+        <name>commit</name>
+        <help><![CDATA[Create a new image from a container's changes]]></help>
+    </command>
+    <command>
+        <name>cp</name>
+        <help><![CDATA[Copy files/folders between a container and the local filesystem]]></help>
+    </command>
+    <command>
+        <name>create</name>
+        <help><![CDATA[Create a new container]]></help>
+    </command>
+    <command>
+        <name>deploy</name>
+        <help><![CDATA[Create and update a stack from a Distributed Application Bundle (DAB)]]></help>
+    </command>
+    <command>
+        <name>diff</name>
+        <help><![CDATA[Inspect changes on a container's filesystem]]></help>
+    </command>
+    <command>
+        <name>events</name>
+        <help><![CDATA[Get real time events from the server]]></help>
+    </command>
+    <command>
+        <name>exec</name>
+        <help><![CDATA[Run a command in a running container]]></help>
+    </command>
+    <command>
+        <name>export</name>
+        <help><![CDATA[Export a container's filesystem as a tar archive]]></help>
+    </command>
+    <command>
+        <name>history</name>
+        <help><![CDATA[Show the history of an image]]></help>
+    </command>
+    <command>
+        <name>images</name>
+        <help><![CDATA[List images]]></help>
+    </command>
+    <command>
+        <name>import</name>
+        <help><![CDATA[Import the contents from a tarball to create a filesystem image]]></help>
+    </command>
+    <command>
+        <name>info</name>
+        <help><![CDATA[Display system-wide information]]></help>
+    </command>
+    <command>
+        <name>inspect</name>
+        <help><![CDATA[Return low-level information on a container, image or task]]></help>
+    </command>
+    <command>
+        <name>kill</name>
+        <help><![CDATA[Kill one or more running containers]]></help>
+    </command>
+    <command>
+        <name>load</name>
+        <help><![CDATA[Load an image from a tar archive or STDIN]]></help>
+    </command>
+    <command>
+        <name>login</name>
+        <help><![CDATA[Log in to a Docker registry.]]></help>
+    </command>
+    <command>
+        <name>logout</name>
+        <help><![CDATA[Log out from a Docker registry.]]></help>
+    </command>
+    <command>
+        <name>logs</name>
+        <help><![CDATA[Fetch the logs of a container]]></help>
+    </command>
+    <command>
+        <name>network</name>
+        <help><![CDATA[Manage Docker networks]]></help>
+    </command>
+    <command>
+        <name>node</name>
+        <help><![CDATA[Manage Docker Swarm nodes]]></help>
+    </command>
+    <command>
+        <name>pause</name>
+        <help><![CDATA[Pause all processes within one or more containers]]></help>
+    </command>
+    <command>
+        <name>plugin</name>
+        <help><![CDATA[Manage Docker plugins]]></help>
+    </command>
+    <command>
+        <name>port</name>
+        <help><![CDATA[List port mappings or a specific mapping for the container]]></help>
+    </command>
+    <command>
+        <name>ps</name>
+        <help><![CDATA[List containers]]></help>
+    </command>
+    <command>
+        <name>pull</name>
+        <help><![CDATA[Pull an image or a repository from a registry]]></help>
+    </command>
+    <command>
+        <name>push</name>
+        <help><![CDATA[Push an image or a repository to a registry]]></help>
+    </command>
+    <command>
+        <name>rename</name>
+        <help><![CDATA[Rename a container]]></help>
+    </command>
+    <command>
+        <name>restart</name>
+        <help><![CDATA[Restart a container]]></help>
+    </command>
+    <command>
+        <name>rm</name>
+        <help><![CDATA[Remove one or more containers]]></help>
+    </command>
+    <command>
+        <name>rmi</name>
+        <help><![CDATA[Remove one or more images]]></help>
+    </command>
+    <command>
+        <name>run</name>
+        <help><![CDATA[Run a command in a new container]]></help>
+    </command>
+    <command>
+        <name>save</name>
+        <help><![CDATA[Save one or more images to a tar archive (streamed to STDOUT by default)]]></help>
+    </command>
+    <command>
+        <name>search</name>
+        <help><![CDATA[Search the Docker Hub for images]]></help>
+    </command>
+    <command>
+        <name>service</name>
+        <help><![CDATA[Manage Docker services]]></help>
+    </command>
+    <command>
+        <name>stack</name>
+        <help><![CDATA[Manage Docker stacks]]></help>
+    </command>
+    <command>
+        <name>start</name>
+        <help><![CDATA[Start one or more stopped containers]]></help>
+    </command>
+    <command>
+        <name>stats</name>
+        <help><![CDATA[Display a live stream of container(s) resource usage statistics]]></help>
+    </command>
+    <command>
+        <name>stop</name>
+        <help><![CDATA[Stop one or more running containers]]></help>
+    </command>
+    <command>
+        <name>swarm</name>
+        <help><![CDATA[Manage Docker Swarm]]></help>
+    </command>
+    <command>
+        <name>tag</name>
+        <help><![CDATA[Tag an image into a repository]]></help>
+    </command>
+    <command>
+        <name>top</name>
+        <help><![CDATA[Display the running processes of a container]]></help>
+    </command>
+    <command>
+        <name>unpause</name>
+        <help><![CDATA[Unpause all processes within one or more containers]]></help>
+    </command>
+    <command>
+        <name>update</name>
+        <help><![CDATA[Update configuration of one or more containers]]></help>
+    </command>
+    <command>
+        <name>version</name>
+        <help><![CDATA[Show the Docker version information]]></help>
+    </command>
+    <command>
+        <name>volume</name>
+        <help><![CDATA[Manage Docker volumes]]></help>
+    </command>
+    <command>
+        <name>wait</name>
+        <help><![CDATA[Block until a container stops, then print its exit code]]></help>
+    </command>
+</framework>

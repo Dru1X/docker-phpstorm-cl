@@ -284,7 +284,6 @@
     <name>up</name>
     <params>service[=null]</params>
     <help><![CDATA[Create and start containers]]></help>
-    <params>service[=null]</params>
     <optionsBefore>
       <option name="-d">
         <help><![CDATA[Detached mode: Run containers in the background, print new container names. Incompatible with --abort-on-container-exit.]]></help>
