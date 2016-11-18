@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<framework xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemas/frameworkDescriptionVersion1.1.4.xsd" name="docker-compose" invoke="docker-compose" alias="dc" enabled="true" version="2">
+  <help><![CDATA[Define and run multi-container applications with Docker.]]></help>
+  <command>
+    <name>build</name>
+    <help><![CDATA[Build or rebuild services]]></help>
+    <optionsBefore>
+      <option name="--force-rm">
+        <help><![CDATA[Always remove intermediate containers.]]></help>
+      </option>
+      <option name="--no-cache">
+        <help><![CDATA[Do not use cache when building the image.]]></help>
+      </option>
+      <option name="--pull">
+        <help><![CDATA[Always attempt to pull a newer version of the image.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>bundle</name>
+    <help><![CDATA[Generate a Docker bundle from the Compose file]]></help>
+    <optionsBefore>
+      <option name="--push-images">
+        <help><![CDATA[Automatically push images for any services which have a `build` option specified.]]></help>
+      </option>
+      <option name="--output" shortcut="-o" pattern="space">
+        <help><![CDATA[Path to write the bundle file to. Defaults to "<project name>.dab".]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>config</name>
+    <help><![CDATA[Validate and view the compose file]]></help>
+    <optionsBefore>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Only validate the configuration, don't print anything.]]></help>
+      </option>
+      <option name="--services">
+        <help><![CDATA[Print the service names, one per line.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>create</name>
+    <help><![CDATA[Create services]]></help>
+    <optionsBefore>
+      <option name="--force-recreate">
+        <help><![CDATA[Recreate containers even if their configuration and image haven't changed. Incompatible with --no-recreate.]]></help>
+      </option>
+      <option name="--no-recreate">
+        <help><![CDATA[If containers already exist, don't recreate them. Incompatible with --force-recreate.]]></help>
+      </option>
+      <option name="--no-build">
+        <help><![CDATA[Don't build an image, even if it's missing.]]></help>
+      </option>
+      <option name="--build">
+        <help><![CDATA[Build images before starting containers.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>down</name>
+    <help><![CDATA[Stop and remove containers, networks, images, and volumes]]></help>
+    <optionsBefore>
+      <option name="--rmi" pattern="space">
+        <help><![CDATA[Remove images. Type must be one of: 'all': Remove all images used by any service. 'local': Remove only images that don't have a custom tag set by the `image` field.]]></help>
+      </option>
+      <option name="--volumes" shortcut="-v">
+        <help><![CDATA[Remove named volumes declared in the `volumes` section of the Compose file and anonymous volumes attached to containers.]]></help>
+      </option>
+      <option name="--remove-orphans">
+        <help><![CDATA[Remove containers for services not defined in the Compose file.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>events</name>
+    <params>service</params>
+    <help><![CDATA[Receive real time events from containers]]></help>
+    <optionsBefore>
+      <option name="--json">
+        <help><![CDATA[Output events as a stream of json objects]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>exec</name>
+    <params>service command args[=null]</params>
+    <help><![CDATA[Execute a command in a running container]]></help>
+    <optionsBefore>
+      <option name="-d">
+        <help><![CDATA[Detached mode: Run command in the background.]]></help>
+      </option>
+      <option name="--privileged">
+        <help><![CDATA[Give extended privileges to the process.]]></help>
+      </option>
+      <option name="--user" pattern="space">
+        <help><![CDATA[Run the command as this user.]]></help>
+      </option>
+      <option name="-T">
+        <help><![CDATA[Disable pseudo-tty allocation. By default `docker-compose exec` allocates a TTY.]]></help>
+      </option>
+      <option name="--index" pattern="equals">
+        <help><![CDATA[index of the container if there are multiple instances of a service [default: 1]]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>help</name>
+    <params>command[=null]</params>
+    <help><![CDATA[Get help on a command]]></help>
+  </command>
+  <command>
+    <name>kill</name>
+    <params>service[=null]</params>
+    <help><![CDATA[Kill containers]]></help>
+    <optionsBefore>
+      <option name="-s" pattern="space">
+        <help><![CDATA[SIGNAL to send to the container. Default signal is SIGKILL.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>logs</name>
+    <params>service[=null]</params>
+    <help><![CDATA[View output from containers]]></help>
+    <optionsBefore>
+      <option name="--no-colour">
+        <help><![CDATA[Produce monochrome output.]]></help>
+      </option>
+      <option name="--follow" shortcut="-f">
+        <help><![CDATA[Follow log output.]]></help>
+      </option>
+      <option name="--timestamps" shortcut="-t">
+        <help><![CDATA[Show timestamps.]]></help>
+      </option>
+      <option name="--tail" pattern="equals">
+        <help><![CDATA[Number of lines to show from the end of the logs for each container. Use "all" to show all lines.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>pause</name>
+    <params>service[=null]</params>
+    <help><![CDATA[Pause services]]></help>
+  </command>
+  <command>
+    <name>port</name>
+    <params>service private_port</params>
+    <help><![CDATA[Print the public port for a port binding]]></help>
+    <optionsBefore>
+      <option name="--protocol" pattern="equals">
+        <help><![CDATA[tcp or udp [default: tcp]]]></help>
+      </option>
+      <option name="--index" pattern="equals">
+        <help><![CDATA[index of the container if there are multiple instances of a service [default: 1]]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>ps</name>
+    <params>service[=null]</params>
+    <help><![CDATA[List containers]]></help>
+    <optionsBefore>
+      <option name="-q">
+        <help><![CDATA[Only display IDs]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>pull</name>
+    <params>service[=null]</params>
+    <help><![CDATA[Pull service images]]></help>
+    <optionsBefore>
+      <option name="--ignore-pull-failures">
+        <help><![CDATA[Pull what it can and ignores images with pull failures.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>push</name>
+    <params>service[=null]</params>
+    <help><![CDATA[Push service images]]></help>
+    <optionsBefore>
+      <option name="--ignore-push-failures">
+        <help><![CDATA[Push what it can and ignores images with push failures.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>restart</name>
+    <params>service[=null]</params>
+    <help><![CDATA[Restart services]]></help>
+    <optionsBefore>
+      <option name="--timeout" shortcut="-t" pattern="space">
+        <help><![CDATA[Specify a shutdown timeout in seconds. (default: 10)]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>rm</name>
+    <params>service[=null]</params>
+    <help><![CDATA[Remove stopped containers]]></help>
+    <optionsBefore>
+      <option name="--force" shortcut="-f">
+        <help><![CDATA[Don't ask to confirm removal.]]></help>
+      </option>
+      <option name="-v">
+        <help><![CDATA[Remove any anonymous volumes attached to containers]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>run</name>
+    <params>service command[=null] args[=null]</params>
+    <help><![CDATA[Run a one-off command]]></help>
+    <optionsBefore>
+      <option name="-d">
+        <help><![CDATA[Detached mode: Run container in the background, print new container name.]]></help>
+      </option>
+      <option name="--name" pattern="space">
+        <help><![CDATA[Assign a name to the container.]]></help>
+      </option>
+      <option name="--entrypoint" pattern="space">
+        <help><![CDATA[Override the entrypoint of the image.]]></help>
+      </option>
+      <option name="-e" pattern="space">
+        <help><![CDATA[Set an environment variable (can be used multiple times).]]></help>
+      </option>
+      <option name="--user" shortcut="-u" pattern="equals">
+        <help><![CDATA[Run as specified username or uid.]]></help>
+      </option>
+      <option name="--no-deps">
+        <help><![CDATA[Don't start linked services.]]></help>
+      </option>
+      <option name="--rm">
+        <help><![CDATA[Remove container after run. Ignored in detached mode.]]></help>
+      </option>
+      <option name="--publish" shortcut="-p" pattern="equals">
+        <help><![CDATA[Publish a container's port(s) to the host.]]></help>
+      </option>
+      <option name="--service-ports">
+        <help><![CDATA[Run command with the service's ports enabled and mapped to the host.]]></help>
+      </option>
+      <option name="-T">
+        <help><![CDATA[Disable pseudo-tty allocation. By default `docker-compose run` allocates a TTY.]]></help>
+      </option>
+      <option name="--workdir" shortcut="-w" pattern="equals">
+        <help><![CDATA[Working directory inside the container.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>scale</name>
+    <params>service[=null]</params>
+    <help><![CDATA[Set number of containers for a service]]></help>
+    <optionsBefore>
+      <option name="--timeout" shortcut="-t" pattern="space">
+        <help><![CDATA[Specify a shutdown timeout in seconds. (default: 10)]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>start</name>
+    <params>service[=null]</params>
+    <help><![CDATA[Start services]]></help>
+  </command>
+  <command>
+    <name>stop</name>
+    <params>service[=null]</params>
+    <help><![CDATA[Stop services]]></help>
+    <optionsBefore>
+      <option name="--timeout" shortcut="-t" pattern="space">
+        <help><![CDATA[Specify a shutdown timeout in seconds. (default: 10)]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>unpause</name>
+    <params>service[=null]</params>
+    <help><![CDATA[Unpause services]]></help>
+  </command>
+  <command>
+    <name>up</name>
+    <params>service[=null]</params>
+    <help><![CDATA[Create and start containers]]></help>
+    <params>service[=null]</params>
+    <optionsBefore>
+      <option name="-d">
+        <help><![CDATA[Detached mode: Run containers in the background, print new container names. Incompatible with --abort-on-container-exit.]]></help>
+      </option>
+      <option name="--no-color">
+        <help><![CDATA[Produce monochrome output.]]></help>
+      </option>
+      <option name="--no-deps">
+        <help><![CDATA[Don't start linked services.]]></help>
+      </option>
+      <option name="--force-recreate">
+        <help><![CDATA[Recreate containers even if their configuration and image haven't changed. Incompatible with --no-recreate.]]></help>
+      </option>
+      <option name="--no-recreate">
+        <help><![CDATA[If containers already exist, don't recreate them. Incompatible with --force-recreate.]]></help>
+      </option>
+      <option name="--no-build">
+        <help><![CDATA[Don't build an image, even if it's missing.]]></help>
+      </option>
+      <option name="--build">
+        <help><![CDATA[Build images before starting containers.]]></help>
+      </option>
+      <option name="--abort-on-container-exit">
+        <help><![CDATA[Stops all containers if any container was stopped. Incompatible with -d.]]></help>
+      </option>
+      <option name="--timeout" shortcut="-t" pattern="space">
+        <help><![CDATA[Use this timeout in seconds for container shutdown when attached or when containers are already running. (default: 10)]]></help>
+      </option>
+      <option name="--remove-orphans">
+        <help><![CDATA[Remove containers for services not defined in the Compose file.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>version</name>
+    <help><![CDATA[Show the Docker-Compose version information]]></help>
+    <optionsBefore>
+      <option name="--short">
+        <help><![CDATA[Shows only Compose's version number.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+</framework>
+
